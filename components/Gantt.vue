@@ -18,15 +18,15 @@ export default {
   },
   mounted() {
     this.gantt = new Gantt('#gantt', this.tasks, {
-      on_date_change: (task, start, end) => {
+      on_date_change: (task, newStart, newEnd) => {
         this.$emit('dateChanged', {
           ...task,
-          start,
-          end,
+          start: newStart,
+          end: newEnd,
         })
       },
-      on_progress_change: (task, progress) => {
-        this.$emit('progressChanged', { ...task, progress })
+      on_progress_change: (task, newProgress) => {
+        this.$emit('progressChanged', { ...task, progress: newProgress })
       },
     })
   },
