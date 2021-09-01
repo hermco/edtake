@@ -6,6 +6,7 @@
 import Gantt from 'frappe-gantt'
 
 export default {
+  name: 'Gantt',
   props: { tasks: { type: Array, required: true } },
   data() {
     return { gantt: null }

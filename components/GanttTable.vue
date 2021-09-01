@@ -25,6 +25,7 @@
 import moment from 'moment'
 
 export default {
+  name: 'GanttTable',
   props: { tasks: { type: Array, required: true } },
   methods: {
     getReadableDate(date) {
